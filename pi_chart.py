@@ -20,7 +20,8 @@ digit_list.pop()  # This removes the '\n' string
 for digit in digit_list:
     digit = int(digit)
 
-bins = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+bins = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  # There needs to be 10 bins otherwise 8 & 9
+                                           # will be grouped together.
 
 plt.hist(digit_list, bins, histtype='bar', rwidth=0.5)
 
