@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+# from matplotlib.pyplot import figure
 import numpy as np
 # import pandas as pd
 
@@ -43,8 +44,8 @@ y = [zero, one, two, three, four, five, six, seven, eight, nine]
 # for totals in y:
 # print(totals)
 
-# n_groups = 10
-fig, ax = plt.subplots()
+# Change figure draw size.
+fig, ax = plt.subplots(figsize = (12, 9))
 
 # index = np.arange(len(y))
 rects = ax.bar(x, y,)
@@ -69,10 +70,6 @@ def autolabel(rects, xpos = 'center'):
         ax.text(rect.get_x() + rect.get_width() * offset[xpos], 1.01 * height,
                 '{}'.format(height), ha = ha[xpos], va = 'bottom')
 
-# Change default window size for readability
-# plt.rcParams['figure.figsize'] = [50.0, 38.0]
-plt.rcParams['figure.dpi'] = 200
 
-fig.tight_layout()
 autolabel(rects)
 plt.show()
